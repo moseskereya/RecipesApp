@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+.App {
+  text-align: center;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+}
+html{
+    font-family:var(--body-font);
+    font-size:16px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav{
+    background-color: var(--main-font-color-dark);
+}
+
+.title{
+    font-family: var(--main-font);
+    color: var(--secondary-font-color);
+    text-transform: uppercase;
+    font-weight:400;
+    font-size: 2rem;
+}
+
+
+ul {
+  list-style: none;
+   display: flex;
+}
+
+.link{
+    margin-right: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1f1e1e;
+}
+h1 {
+color: #242222;
+margin-bottom: 0.5rem;
+font-family: var(--main-font);
+}
+
+/* hero section */
+
+.hero{
+    height: 40vh;
+    position: relative;
+    width: 100%;
+    background-image: url('./Components/images/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    margin-bottom:2rem;
+}
+
+.hero::before{
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    height: inherit;
+    width: inherit;
+}
+.hero-clipped{
+    height: inherit;
+    background-color: #ffffff; 
+    top: 0;
+    width: 60%;
+    transform-origin: right;
+    right: 0;
+    z-index: 10;
+    position: absolute;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero-textbox{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    text-align: center;
+    transform: translate(-50% -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    list-style: 1.5;
+    color: #c59d5f;
+    padding: 1rem;
+    z-index: 20;
+}
+
+
+.hero2{
+    background-image: url('./Components/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+}
+.sub-headline{
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+    animation: fade .4s forwards;
+    animation-delay: .5s;
+    margin: 2rem 0;
+}
+.first-letter{
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+section{
+    padding: 3.9rem 0;
+}
+
+.head-line{
+color: #fff;
+font-size: 2rem;
+font-family: var(--main-font-color-dark);
+text-transform: uppercase;
+margin-right: -5.rem;
+letter-spacing: .4rem;
+font-weight: 900;
+}
+
+.separator{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.line{
+    width: 20px;
+    min-width: 4.4rem;
+    height: .10rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.line-right::before,
+.line-left::before{
+    content:'';
+    position: absolute;
+    border-right-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+}
+
+.asterisk{
+    color:var(--secondary-font-color);
+    font-size: .8rem;
+    margin:  0.5rem 1.9rem;
+    display: flex;
+}
+.description h5{
+  color:#fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -2px;
+font-weight: 100;
+
+}
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 2px;
+}
+.spin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.btn{
+   background-color: var(--secondary-font-color);
+    transition: background-color .5s;
+    padding: .5rem;
+    color: white;
+    color: var(--body-font-color);
+    text-decoration: none;   
+}
+
+.cta-btn{
+    background-color: var(--secondary-font-color);
+    font-size: 1.1rem;
+    transition: background-color .5s;
+    padding: .5rem 1.2rem;
+    color: white;
+    color: var(--body-font-color);
+    margin-top: 2rem;
+    margin-left:3.5rem;
+    border: none;
+    text-decoration: none;
+}
+.cta-btn:hover,
+.cta-btn:focus{
+    color: #fff;
+}
+
+.loading{
+    height: 100vh;
+    background-color: rgb(139, 92, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading h5{
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe{
+    padding: .5rem;
+    margin: .6rem;
+    box-shadow: inset 0 -3em 3em rgba(204, 204, 204, 0.1),   0 0  0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(114, 114, 114, 0.205);
+    border-radius: 1rem;
+}
+.recipe h4{
+    color: #8e8e8e;
+    margin: 2rem 0;
+}
+
+.recipe img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    height: 350px;
+}
+.footer{
+    padding: 30px;
+    background-color: var(--main-font-color-dark);
+    color: var(--secondary-font-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+.icons .fab{
+ color: #c59d5f;
+ margin: 1rem;
+ font-size: 1.4rem;
+}
+/* Details page styles */
+.detail-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3px;
+}
+
+.how_to_cook{
+    margin: 1rem;
+}
+.detail img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+.content_details{
+    padding: 1.3rem;
+}
+.content_details h3{
+    padding: 1.2rem;
+    text-transform: uppercase;
+}
+.More{
+    padding: 1.2rem 0;
+}
+.More h3{
+    text-transform: uppercase;
+}
+.More h5{
+    color: #c59d5f;
+    margin: 1.2rem 0;
+    text-transform: uppercase;
+}
+.prepare p{
+    padding: 7px;
+    margin: 1rem;
+}
+.how_to_cook h5{
+   padding: 7px;
+   margin: 1rem; 
+   text-transform: uppercase;
+   color: #c59d5f;
+   font-size: 16px;
+}
+.how_to_cook h2{
+   padding: 7px;
+   margin: 1rem; 
+   text-transform: uppercase;
+   color: #292929;
+   font-size: 16px;
+}
+.items_prepared{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.items_prepared img{
+    margin: 1rem;
+    width: 250px;
+    height: 250px;
+}
+.items_prepared p{
+ margin: 1.4rem;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.search input{
+    margin: 3rem 0;
+    padding:.8rem;
+}
+.submit{
+    margin: 3rem 0;
+    padding:.9rem; 
+    border: none;
+    background-color: var(--body-font-color);
+}
+.submit .fa{
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1029px){
+   .recipes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+   } 
+   .items_prepared {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+     justify-content: center;
+     align-content: center;
+   }
+   .items_prepared img{
+    margin: 1rem;
+    width: 90%;
+    object-fit: cover;
+}
+   .detail-container {
+       grid-template-columns: repeat(1, 1fr);
+   }
+   .title{
+       font-size: 1.6rem;
+       letter-spacing: 0;
+   }
+ .recipe img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.head-line{
+    font-size: 2rem;
+}
+.sub-headline{
+    font-size: 8rem;
+ }
+}
+
+@media screen and (max-width: 786px){
+   .recipes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+   } 
+    .detail-container {
+       grid-template-columns: repeat(1, 1fr);
+   }
+
+   .recipe img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.head-line{
+    font-size: 1rem;
+}
+.sub-headline{
+    font-size: 4rem;
+ }
+ .first-letter{
+     font-size: 5rem;
+ }
+}
+
+@media screen and (max-width: 375px){
+   .recipes{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
+   } 
+
+   .recipe img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+}
