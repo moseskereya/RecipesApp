@@ -288,12 +288,12 @@ font-weight: 100;
     background-color: var(--main-font-color-dark);
     color: var(--secondary-font-color);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .icons .fab{
  color: #c59d5f;

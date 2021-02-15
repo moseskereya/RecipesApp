@@ -45,7 +45,7 @@ class Search extends Component {
                                    <i className="fa fa-search"></i>
                                 </button>
                             </form>
-                        </div>
+                     </div>
                     )
                 }}
            </Consumer>
