@@ -12,6 +12,7 @@
 }
 body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
@@ -20,7 +21,14 @@ body{
     --main-font-color-dark: #252525;
     --secondary-font-color: #c59d5f;
     --body-font-color: #515151;
+
 }
+.dark-theme{
+    background-color: #2b2a2a;
+    color: whitesmoke;
+}
+
+
 html{
     font-family:var(--body-font);
     font-size:16px;
@@ -63,8 +71,9 @@ ul {
     margin-right: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: #1f1e1e;
+    color: rgb(122, 119, 119);
 }
+
 h1 {
 color: #242222;
 margin-bottom: 0.5rem;
@@ -269,11 +278,10 @@ font-weight: 100;
 .recipe{
     padding: .5rem;
     margin: .6rem;
-    box-shadow: inset 0 -3em 3em rgba(204, 204, 204, 0.1),   0 0  0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(114, 114, 114, 0.205);
+    box-shadow: inset 0 -3em 3em rgba(204, 204, 204, 0),   0 0  0 2px rgba(255, 255, 255, 0), 0.3em 0.3em 1em rgba(114, 114, 114, 0.205);
     border-radius: 1rem;
 }
 .recipe h4{
-    color: #8e8e8e;
     margin: 2rem 0;
 }
 
