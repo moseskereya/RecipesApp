@@ -19,6 +19,7 @@ class Recipes extends Component {
                         )
                     
                     } else {
+
                         return (
                             <React.Fragment>
                                 <div className="hero">
@@ -28,13 +29,13 @@ class Recipes extends Component {
                                 </div>
                                 <Search />
                                 <div className="recipes">
-                                {recipes.map(item => (
+                                    {recipes.map(item => (
                                     <div className="recipe">
                                         <Link to={
                                             { pathname: `/Details/${item.recipe.label}`, state: { items: item.recipe.label } }}>
                                             <img src={item.recipe.image} alt="recipe_img" />
-                                        </Link>
-                                        <h4>{item.recipe.label}</h4>
+                                            </Link>
+                                        <h5 className="toggle_label">{item.recipe.label}</h5>
                                      </div>
                                 ))}
                                 </div>

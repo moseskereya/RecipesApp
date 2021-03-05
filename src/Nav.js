@@ -1,10 +1,11 @@
+/* eslint-disable no-const-assign */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 class Nav extends Component {
-    state = {}
-
+    state = {
+    }
     changeTheme = () => {
-        const moon = document.querySelector('.fa-moon');
+        const moon = document.querySelector('.fa-sun');
         moon.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
         })
@@ -15,7 +16,7 @@ class Nav extends Component {
 
             <main>
                 <nav>
-                    <h1 className="title"><span>R</span>ecipe</h1>
+                    <h3 className="title"><span>R</span>ecipe</h3>
                       <ul>
                         <Link className="link" to="/">
                             <li>Home</li>
@@ -25,7 +26,7 @@ class Nav extends Component {
                         </Link>
                         <li className="link">
                           <span>
-                             <i className="fa fa-moon" onClick={this.changeTheme}></i>
+                                <i className="fa fa-sun" onClick={this.changeTheme}></i>
                           </span>
                         </li>
                     </ul>

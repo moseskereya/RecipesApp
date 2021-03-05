@@ -26,7 +26,7 @@ export class Provider extends Component {
     componentDidMount = () => {
         const app_id = "d0021928";
         const api_key = "3c5a85a012ba1a0db1c2a1899694b6dc";
-        const endpoint = `https://api.edamam.com/search?q=cinnamon beef&app_id=${app_id}&app_key=${api_key}&from=0&to=100&health=alcohol-free`;
+        const endpoint = `https://api.edamam.com/search?q=recipes&app_id=${app_id}&app_key=${api_key}&from=0&to=100&health=alcohol-free`;
         axios.get(endpoint)
             .then(res => {
                 this.setState({ recipes: res.data.hits })
