@@ -13,7 +13,6 @@ class Nav extends Component {
 
     render() {
         return (
-
             <main>
                 <nav>
                     <h3 className="title"><span>R</span>ecipe</h3>

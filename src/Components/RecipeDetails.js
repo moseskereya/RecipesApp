@@ -43,17 +43,17 @@ class RecipeDetail extends Component {
                               <div className="More">
                                     <h3>More Details</h3>
                                     <h5>HealthLabels</h5>
-                                    <span>
-                                       {data.healthLabels}
-                                   </span>
+                                    <p>
+                                      {data.healthLabels}
+                                    </p>
                                 <h5>Ingredients</h5>
-                                <span>
+                                <p>
                                     {data.healthLabels}
-                                </span>
+                                </p>
                             </div>
                                 <div>
                                     <a href={data.url}>
-                                    <button className="btn cta-btn">Read More</button>
+                                    <button className="btn cta-btn">More</button>
                                     </a>
                                     <Link to="/Recipes" class="btn cta-btn">
                                         Back

@@ -10,22 +10,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
     --body-font: 'Cabin', sans-serif;
-    --main-font-color-dark: #252525;
+    --main-font-color-dark: #23243a;
     --secondary-font-color: #c59d5f;
     --body-font-color: #515151;
-
 }
+
 .dark-theme{
     background-color: var(--main-font-color-dark);
-    color: whitesmoke;
+    color: var(--secondary-font-color);
 }
 
 html{
@@ -35,23 +37,25 @@ html{
     scroll-behavior: smooth;
 }
 
-
 main {
-  max-width: 900px;
+  max-width: 100%;
+  width: 100%;
   margin: auto;
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
+  background-color: var(--main-font-color-dark);
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-}
-.nav{
-  background-color: var(--main-font-color-dark);
+  padding: 15px 0;
 }
 
+.nav{
+    background-color: var(--main-font-color-dark);
+}
 .title{
     font-family: var(--main-font);
     color: var(--secondary-font-color);
@@ -71,7 +75,7 @@ ul {
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
-    color: rgb(122, 119, 119);
+    color: var(--secondary-font-color);
     font-size: 14px;
 }
 
@@ -170,10 +174,9 @@ section{
 
 .head-line{
 color: #fff;
-font-size: 2rem;
+font-size: 16px;
 font-family: var(--main-font-color-dark);
 text-transform: uppercase;
-margin-right: -5.rem;
 letter-spacing: .4rem;
 font-weight: 900;
 }
@@ -188,6 +191,7 @@ justify-content: center;
    font-weight: 100;
     margin: 1.3rem;
 }
+
 .line{
     width: 20px;
     min-width: 4.4rem;
@@ -226,7 +230,6 @@ font-weight: 100;
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-right: 2px;
 }
 .spin{
     display: flex;
@@ -241,18 +244,17 @@ font-weight: 100;
     padding: .5rem;
     color: white;
     color: var(--body-font-color);
-    text-decoration: none;   
+    text-decoration: none; 
+    margin: 0 .8rem;  
 }
 
 .cta-btn{
     background-color: var(--secondary-font-color);
-    font-size: 1.1rem;
+    font-size: .7rem;
     transition: background-color .5s;
     padding: .5rem 1.2rem;
     color: white;
     color: var(--body-font-color);
-    margin-top: 2rem;
-    margin-left:3.5rem;
     border: none;
     text-decoration: none;
 }
@@ -299,28 +301,32 @@ font-weight: 100;
     border-radius: 1rem;
     height: 350px;
 }
+
 .footer{
-    padding: 18px;
+    padding: 15px 0;
     background-color: var(--main-font-color-dark);
     color: var(--secondary-font-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
+
 .icons{
     display: flex;
     justify-content: space-evenly;
 }
+
 .icons .fab{
  color: #c59d5f;
  margin: 1rem;
- font-size: 1.4rem;
+ font-size: 1rem;
 }
 /* Details page styles */
 .detail-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3px;
+    font-family: var(--main-font);
 }
 
 .how_to_cook{
@@ -330,21 +336,29 @@ font-weight: 100;
     height: 500px;
     width: 100%;
     object-fit: cover;
-    margin: 2rem 0;
 }
+
 .content_details{
     padding: 1.3rem;
 }
 .content_details h3{
     padding: 1.2rem;
-    text-transform: uppercase;
+    font-family:var(--body-font);
+   font-weight: 100;
+
 }
 .More{
     padding: 1.2rem 0;
 }
 .More h3{
-    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: 100;
 }
+.More p {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
 .More h5{
     color: #c59d5f;
     margin: 1.2rem 0;
@@ -353,6 +367,8 @@ font-weight: 100;
 .prepare p{
     padding: 7px;
     margin: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
 }
 .how_to_cook h5{
    padding: 7px;
@@ -365,7 +381,7 @@ font-weight: 100;
    padding: 7px;
    margin: 1rem; 
    text-transform: uppercase;
-   color: #292929;
+   color: var(--secondary-font-color);
    font-size: 16px;
 }
 .items_prepared{
@@ -389,17 +405,19 @@ font-weight: 100;
     align-items: center;
 }
 .search input{
-    margin: 3rem 0;
-    padding:.8rem;
+    margin: 3rem .8rem;
+    padding:1rem; 
+    border: none;
 }
+
 .submit{
     margin: 3rem 0;
-    padding:.9rem; 
+    padding:1rem; 
     border: none;
-    background-color: var(--body-font-color);
+    background-color: white;
 }
 .submit .fa{
-    color: whitesmoke;
+    color: rgb(82, 77, 77);
 }
 
 @media screen and (max-width: 1029px){
@@ -424,7 +442,7 @@ font-weight: 100;
        grid-template-columns: repeat(1, 1fr);
    }
    .title{
-       font-size: 1.6rem;
+       font-size: 1rem;
        letter-spacing: 0;
    }
  .recipe img{
@@ -432,9 +450,7 @@ font-weight: 100;
     height: 280px;
     object-fit: cover;
 }
-.head-line{
-    font-size: 2rem;
-}
+
 .sub-headline{
     font-size: 8rem;
  }
@@ -456,14 +472,15 @@ font-weight: 100;
     height: 280px;
     object-fit: cover;
 }
-.head-line{
-    font-size: 1rem;
-}
+
 .sub-headline{
     font-size: 4rem;
  }
  .first-letter{
      font-size: 5rem;
+ }
+ .title{
+     font-size: .8rem 0;
  }
 }
 
