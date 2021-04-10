@@ -19,7 +19,7 @@ function Home() {
                         <div className="line line-right"></div>
                     </div>
                      <div className="single-animation">
-                         <Link to="/Recipes" class="btn cta-btn">
+                         <Link to="/Recipes" class="button_home">
                           Explore 
                         </Link>
                     </div>
