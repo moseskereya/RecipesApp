@@ -15,7 +15,7 @@ function App() {
                 <React.Fragment>
                  <div className="Container">
                     <Switch>
-                         <Route path="/" exact component={Home} />
+                          <Route path="/" exact component={Home} />
                           <Route path="/Recipes/" component={Recipes} />
                           <Route path="/Details/:id" component={RecipeDetails} />
                     </Switch>
